@@ -2,8 +2,9 @@ import React from "react"
 
 function Header(){
     return (
-        <header className="navbar">
-            <h1>This is my footer</h1>
+        <header>
+            <img src="https://i.kym-cdn.com/photos/images/newsfeed/000/096/044/trollface.jpg?1296494117" alt="Problem?"/>
+            <p>Meme Generator</p>
         </header>
     )
 }
