@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import TodoItem from './components/TodoItem';
+import todosData from './components/todosData';
+import Conditional from './components/Conditional';
+import Form from './components/FormContainer';
+
+/*class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      todos: todosData
+    }
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(id) {
+    this.setState(prevState => {
+      const updatedTodos = prevState.todos.map(todo =>{
+        if (todo.id === id) {
+          todo.completed = !todo.completed
+        }
+        return todo 
+      })
+      return {
+        todos: updatedTodos
+      }
+    })
+  }
+
+  render(){
+    const TodoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}
+      handleChange={this.handleChange}
+    />)
+ 
+    return (
+      <div className="todo-list">
+         {TodoItems}
+      </div>
+    )
+  }
+  
+}
+*/
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Form />
+  )
 }
 
 export default App;
